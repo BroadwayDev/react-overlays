@@ -271,15 +271,21 @@ const Modal = React.createClass({
   renderBackdrop() {
     let {
       transition: Transition,
-      backdropTransitionTimeout } = this.props;
+      backdropTransitionTimeout,
+      customBackdrop } = this.props;
 
-    let backdrop = (
-      <div ref="backdrop"
-        style={this.props.backdropStyle}
-        className={this.props.backdropClassName}
-        onClick={this.handleBackdropClick}
-      />
-    );
+    let backdrop;
+
+    if(customBackdrop) {
+        backdrop = customBackdrop;
+    } else {
+        backdrop = (
+            <div ref="backdrop"
+                 style={this.props.backdropStyle}
+                 className={this.props.backdropClassName}
+                 onClick={this.handleBackdropClick}
+                />
+        );
 
     if (Transition) {
       backdrop = (
@@ -292,6 +298,7 @@ const Modal = React.createClass({
       );
     }
 
+    }
     return backdrop;
   },
 
