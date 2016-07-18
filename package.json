@@ -1,11 +1,11 @@
 {
   "name": "react-overlays-broadway",
-  "version": "0.6.5",
+  "version": "0.6.8",
   "description": "Utilities for creating robust overlay components",
-  "author": "Jason Quense <monastic.panic@gmail.com>",
+  "author": "Broadway.com <devny@broadway.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/react-bootstrap/react-overlays.git"
+    "url": "git+https://github.com/BroadwayDev/react-overlays"
   },
   "license": "MIT",
   "main": "lib/index.js",
